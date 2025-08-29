@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Inspeção PWA</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+</head>
+<body>
+  <header>
+    <h1>Inspeção (ORB + ROIs)</h1>
+    <button id="btnInstall" hidden>Instalar App</button>
+  </header>
+
+  <main>
+    <div class="panel">
+      <video id="video" playsinline autoplay muted></video>
+      <canvas id="canvas" class="hide"></canvas>
+      <div id="overlay"></div>
+    </div>
+
+    <div class="controls">
+      <button id="btnFreeze">Congelar</button>
+      <button id="btnPickTemplate">Definir Template</button>
+      <button id="btnAddRoiTpl">+ ROI Template</button>
+      <button id="btnAddRoiBarcode">+ ROI Barcode</button>
+      <button id="btnSaveProgram">Salvar Programa</button>
+      <input id="fileProgram" type="file" accept="application/json" />
+      <button id="btnLoadProgram">Carregar Programa</button>
+      <button id="btnRun">Executar</button>
+    </div>
+
+    <pre id="status">Status: aguardando…</pre>
+    <div id="roisList"></div>
+  </main>
+
+  <script src="opencv.js"></script>
+  <script src="zxing.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

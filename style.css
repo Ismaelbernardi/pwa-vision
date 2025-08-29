@@ -1,0 +1,10 @@
+body { font-family: system-ui, sans-serif; margin: 0; }
+header, .controls { padding: 8px; background: #111; color: #fff; }
+.controls button, .controls input { margin: 4px; }
+.panel { position: relative; display: grid; place-items: center; background:#000; }
+video { width: 100%; max-width: 640px; }
+#overlay { position: absolute; inset: 0; pointer-events: none; }
+.hide { display: none; }
+#roisList { padding: 8px; }
+.ok { color: #0c0; font-weight: 700; }
+.ng { color: #c00; font-weight: 700; }
